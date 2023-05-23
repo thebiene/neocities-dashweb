@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head> 
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>QUIZ!!!!!</title>
+   <link rel="icon" type="image/x-icon" href="">
+   <style>
+    :root{
+        /*SOLARIZED DARK*/
+        --SDblack:#002B36;
+        --SDdarkGray:#01313F;
+        --SDliteGray:#657B83;
+        --SDgray:#93A1A1;
+        --SDpink:#C8357D;
+        --SDgreen:#859900;
+        --SDteal:#2AA198;
+        --SDblue:#268BD2;
+        
+        /*idgaf!!! ill literally explode this entire computer!!! kill everyone!!!*/
+        --SDFmidl:#03535F;
+        --SDFblack:#00212A;
+        --SDFdarkTeal:#0F7179;
+        --SDFliteTeal:#56D2B7;
+        --SDFdarkGreen:#4C6F02;
+        --SDFliteGreen:#B5CD18;
+        --SDFdarkPink:#9A1271;
+        --SDFlitePink:#EC558A;
+        --SLFdarkWhite:#F1CCA2;
+        
+        /*SOLARIZED LIGHT*/
+        --SLwhite:#FDF6E3;
+        --SLeggshell:#FBF1D3;
+        }
+      h1{color:var(--SDliteGray);font-size:24px;}
+      #form{color:var(--SDliteGray);}
+      fieldset{border:1px solid var(--SDteal);color:var(--SDFdarkTeal);}
+      button{display:block;background-color:pink;border:1px solid var(--SLwhite);border-radius:5px;color:var(--SLwhite);padding:5px;margin:5px;}
+      .resultBox{display:none;border:1px solid black;padding:10px;}
+   </style>
+   <script>
+      const resultPoints = {
+         axolotlPoints:0,
+         mooshroomPoints:0,
+         chickenPoints:0,
+         cowPoints:0,
+         donkeyPoints:0,
+         foxPoints:0,
+         frogPoints:0,
+         parrotPoints:0,
+         pigPoints:0,
+         rabbitPoints:0,
+         sheepPoints:0,
+         squidPoints:0,
+         turtlePoints:0,
+         beePoints:0,
+         goatPoints:0,
+         llamaPoints:0,
+         pandaPoints:0,
+         polarbearPoints:0,
+         catPoints:0,
+         wolfPoints:0
+      }
+      const test = {
+        one:3,
+        two:2,
+        three:3,
+      }
+      var questionNumber = 1;
+      function count(z){
+        console.log(z);
+        resultPoints[`${z}` + "Points"]++;//HI IF YOU ARE READING THIS congratulations I found a much better way to count result points than in my original code. Have fun with it lol
+      }
+      function calculateResults() {
+         const maxPoints = Math.max(...Object.values(resultPoints));
+         for (const key of Object.keys(resultPoints)){
+            console.log(key, resultPoints[key]);
+            if (resultPoints[key] == maxPoints) {
+               show(`${key}`);
+               console.log("max: ", key, resultPoints[key]);
+               break;
+            }
+         }
+      }
+      function showNextQuestion() {
+         var howManyQs = document.getElementsByTagName("fieldset").length;
+         if (questionNumber < howManyQs) {
+            let thisQuestion = "Q" + questionNumber;
+            hide(thisQuestion);
+            questionNumber++;
+            let nextQuestion = "Q" + questionNumber;
+            show(nextQuestion);
+         }
+         else {
+            let thisQuestion = "Q" + questionNumber;
+            hide(thisQuestion);
+            console.log(resultPoints);
+            calculateResults();
+         }
+      }
+      function show(y) {
+         var x = document.getElementById(y);
+            x.style.display = "block";
+      }
+      function hide(y) {
+         var x =document.getElementById(y);
+            x.style.display = "none";
+      }
+   </script>
+   <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+</head>
+
+<body>
+   <div id="form">
+      <h1>Which Minecraft animal are you???</h1>
+      <fieldset id="Q1" style="display:block;">
+         <legend>pick a cool color</legend>
+         <button style='background-color:#d478ff'  onclick="showNextQuestion(), count('bee'), count('wolf')"> lavender </button>
+         <button style='background-color:#7222a8' onclick="showNextQuestion(), count('parrot'), count('llama')"> violet </button>
+         <button style='background-color:#330757' onclick="showNextQuestion(), count('mooshroom'), count('cow')"> plum </button>
+         <button style='background-color:#1c0078' onclick="showNextQuestion(), count('squid'), count('frog')"> indigo </button>
+         <button style='background-color:#1a5aad' onclick="showNextQuestion(), count('polarbear'), count('cat')"> teal </button>
+         <button style='background-color:#3dafe0' onclick="showNextQuestion(), count('turtle'), count('donkey')"> tuquoise </button>
+         <button style='background-color:#0da680' onclick="showNextQuestion(), count('panda'), count('fox')"> emerald </button>
+         <button style='background-color:#105730' onclick="showNextQuestion(), count('axolotl'), count('pig')"> moss green </button>
+         <button style='background-color:#4fc744' onclick="showNextQuestion(), count('sheep'), count('chicken')"> grass green </button>
+         <button style='background-color:#b5de68' onclick="showNextQuestion(), count('goat'), count('rabbit')"> sage green </button>
+      </fieldset>
+      <fieldset id="Q2" style="display:none;">
+         <legend>pick a warm color</legend>
+         <button style='background-color:#fffd6e;color:var(--SDliteGray);' onclick="showNextQuestion(), count('llama'), count('rabbit')"> yellow green </button>
+         <button style='background-color:#fccf28'  onclick="showNextQuestion(), count('cow'), count('panda')"> lemon </button>
+         <button style='background-color:#d1b608' onclick="showNextQuestion(), count('bee'), count('cat')"> sunflower </button>
+         <button style='background-color:#ffb012' onclick="showNextQuestion(), count('pig'), count('frog')"> cadmium </button>
+         <button style='background-color:#eb7500' onclick="showNextQuestion(), count('fox'), count('donkey')"> orange </button>
+         <button style='background-color:#d93d00' onclick="showNextQuestion(), count('parrot'), count('wolf')"> red </button>
+         <button style='background-color:#940000' onclick="showNextQuestion(), count('goat'), count('polarbear')"> scarlet </button>
+         <button style='background-color:#b00957' onclick="showNextQuestion(), count('chicken'), count('squid')"> berry pink </button>
+         <button style='background-color:#db0fa2' onclick="showNextQuestion(), count('mooshroom'), count('turtle')"> magenta </button>
+         <button style='background-color:#ff6bf8' onclick="showNextQuestion(), count('axolotl'), count('sheep')"> pink </button>
+      </fieldset>
+      <fieldset id="Q3" style="display:none;">
+         <legend>pick a minecraft wood</legend>
+         <button onclick="showNextQuestion(), count('pig'), count('rabbit')">birch</button>
+         <button onclick="showNextQuestion(), count('cow'), count('bee')">oak</button>
+         <button onclick="showNextQuestion(), count('fox'), count('wolf')">spruce</button>
+         <button onclick="showNextQuestion(), count('mooshroom'), count('sheep')">dark oak</button>
+         <button onclick="showNextQuestion(), count('parrot'), count('turtle')">jungle</button>
+         <button onclick="showNextQuestion(), count('donkey'), count('polarbear')">acacia</button>
+         <button onclick="showNextQuestion(), count('frog'), count('cat')">mangrove</button>
+         <button onclick="showNextQuestion(), count('panda'), count('chicken')">bamboo</button>
+         <button onclick="showNextQuestion(), count('goat'), count('squid')">crimson</button>
+         <button onclick="showNextQuestion(), count('axolotl'), count('llama')">warped</button>
+      </fieldset>
+      <fieldset id="Q4" style="display:none;">
+         <legend>pick a minecraft activity</legend>
+         <button onclick="showNextQuestion(), count('cow'), count('mooshroom'), count('fox'), count('pig'), count('squid')">mine</button>
+         <button onclick="showNextQuestion(), count('parrot'), count('chicken'), count('frog'), count('rabbit'), count('polarbear')">build</button>
+         <button onclick="showNextQuestion(), count('wolf'), count('donkey'), count('axolotl'), count('llama'), count('goat')">explore</button>
+         <button onclick="showNextQuestion(), count('bee'), count('cat'), count('sheep'), count('turtle'), count('panda')">redstone</button>
+      </fieldset>
+      <fieldset id="Q5" style="display:none;">
+         <legend>pick a minecraft biome</legend>
+         <button onclick="showNextQuestion(), count('polarbear'), count('fox')">taiga</button>
+         <button onclick="showNextQuestion(), count('cow'), count('donkey')">plains</button>
+         <button onclick="showNextQuestion(), count('bee'), count('sheep')">flower forest</button>
+         <button onclick="showNextQuestion(), count('chicken'), count('squid')">birch forest</button>
+         <button onclick="showNextQuestion(), count('wolf'), count('goat')">oak forest</button>
+         <button onclick="showNextQuestion(), count('parrot'), count('pig')">dark forest</button>
+         <button onclick="showNextQuestion(), count('turtle'), count('cat')">swamp</button>
+         <button onclick="showNextQuestion(), count('panda'), count('axolotl')">jungle</button>
+         <button onclick="showNextQuestion(), count('rabbit'), count('llama')">desert</button>
+         <button onclick="showNextQuestion(), count('mooshroom'), count('frog')">mushroom</button>
+      </fieldset>
+      <fieldset id="Q6" style="display:none;">
+         <legend>multiplayer or singleplayer</legend>
+         <button  onclick="showNextQuestion(), count('wolf'), count('fox'), count('donkey'), count('bee'), count('llama'), count('cow'), count('sheep'), count('chicken'), count('parrot'), count('pig')">multiplayer</button>
+         <button onclick="showNextQuestion(), count('axolotl'), count('frog'), count('mooshroom'), count('rabbit'), count('squid'), count('turtle'), count('goat'), count('panda'), count('polarbear'), count('cat')">singleplayer</button>
+      </fieldset>
+      <fieldset id="Q7" style="display:none;">
+         <legend>pick a minecraft food</legend>
+         <button  onclick="showNextQuestion(), count('mooshroom'), count('donkey')">golden apple</button>
+         <button  onclick="showNextQuestion(), count('polarbear'), count('squid')">beef</button>
+         <button  onclick="showNextQuestion(), count('sheep'), count('rabbit')">potato</button>
+         <button  onclick="showNextQuestion(), count('chicken'), count('goat')">bread</button>
+         <button  onclick="showNextQuestion(), count('cat'), count('pig')">chicken</button>
+         <button  onclick="showNextQuestion(), count('fox'), count('bee')">suspicious stew</button>
+         <button  onclick="showNextQuestion(), count('frog'), count('parrot')">apple</button>
+         <button  onclick="showNextQuestion(), count('panda'), count('cow')">cookies</button>
+         <button  onclick="showNextQuestion(), count('wolf'), count('turtle')">rotten flesh</button>
+         <button  onclick="showNextQuestion(), count('axolotl'), count('llama')">cake</button>
+      </fieldset>
+      <fieldset id="Q8" style="display:none;">
+         <legend>pick a other games</legend>
+         <button  onclick="showNextQuestion(), count('frog'), count('goat'), count('bee'), count('rabbit')">platformer</button>
+         <button  onclick="showNextQuestion(), count('axolotl'), count('parrot'), count('turtle'), count('panda')">puzzle</button>
+         <button  onclick="showNextQuestion(), count('llama'), count('polarbear'), count('chicken'), count('cow')">rpg</button>
+         <button  onclick="showNextQuestion(), count('squid'), count('pig'), count('sheep'), count('donkey')">sandbox</button>
+         <button  onclick="showNextQuestion(), count('cat'), count('wolf'), count('mooshroom'), count('fox')">pokemon</button>
+      </fieldset>
+      <fieldset id="Q9" style="display:none;">
+         <legend>pick a season</legend>
+         <button  onclick="showNextQuestion(), count('parrot'), count('llama'), count('axolotl'), count('squid'), count('turtle')">summer</button>
+         <button  onclick="showNextQuestion(), count('frog'), count('donkey'), count('cat'), count('cow'), count('sheep')">fall</button>
+         <button  onclick="showNextQuestion(), count('mooshroom'), count('polarbear'), count('fox'), count('goat'), count('wolf')">winter</button>
+         <button  onclick="showNextQuestion(), count('bee'), count('chicken'), count('rabbit'), count('pig'), count('panda')">spring</button>
+      </fieldset>
+      <fieldset id="Q10" style="display:none;">
+         <legend>pick a oatmeal topping</legend>
+         <button  onclick="showNextQuestion(), count('mooshroom'), count('turtle')">blueberries</button>
+         <button  onclick="showNextQuestion(), count('frog'), count('llama')">brown sugar</button>
+         <button  onclick="showNextQuestion(), count('cow'), count('sheep')">cream</button>
+         <button  onclick="showNextQuestion(), count('cat'), count('squid')">chocolate</button>
+         <button  onclick="showNextQuestion(), count('pig'), count('rabbit')">strawberries</button>
+         <button  onclick="showNextQuestion(), count('donkey'), count('wolf')">maple syrup</button>
+         <button  onclick="showNextQuestion(), count('chicken'), count('axolotl')">cinnamon</button>
+         <button  onclick="showNextQuestion(), count('parrot'), count('fox')">apple</button>
+         <button  onclick="showNextQuestion(), count('polarbear'), count('goat')">ice</button>
+         <button  onclick="showNextQuestion(), count('bee'), count('panda')">honey</button>
+      </fieldset>
+      <fieldset id="Q11" style="display:none;">
+         <legend>favorite vowel</legend>
+         <button  onclick="showNextQuestion(), count('axolotl'), count('llama'), count('cat'), count('panda')">a</button>
+         <button  onclick="showNextQuestion(), count('donkey'), count('bee'), count('polarbear'), count('sheep')">e</button>
+         <button  onclick="showNextQuestion(), count('pig'), count('chicken'), count('rabbit'), count('parrot')">i</button>
+         <button  onclick="showNextQuestion(), count('goat'), count('cow'), count('frog'), count('fox')">o</button>
+         <button  onclick="showNextQuestion(), count('turtle'), count('mooshroom'), count('squid'), count('wolf')">u</button>
+      </fieldset>
+      <fieldset id="Q12" style="display:none;">
+         <legend>pick a minecraft animal</legend>
+         <button  onclick="showNextQuestion(), count('axolotl')">axolotl</button>
+         <button  onclick="showNextQuestion(), count('mooshroom')">mooshroom</button>
+         <button  onclick="showNextQuestion(), count('chicken')">chicken</button>
+         <button  onclick="showNextQuestion(), count('cow')">cow</button>
+         <button  onclick="showNextQuestion(), count('donkey')">donkey</button>
+         <button  onclick="showNextQuestion(), count('fox')">fox</button>
+         <button  onclick="showNextQuestion(), count('frog')">frog</button>
+         <button  onclick="showNextQuestion(), count('parrot')">parrot</button>
+         <button  onclick="showNextQuestion(), count('pig')">pig</button>
+         <button  onclick="showNextQuestion(), count('rabbit')">rabbit</button>
+         <button  onclick="showNextQuestion(), count('sheep')">sheep</button>
+         <button  onclick="showNextQuestion(), count('squid')">squid</button>
+         <button  onclick="showNextQuestion(), count('turtle')">turtle</button>
+         <button  onclick="showNextQuestion(), count('bee')">bee</button>
+         <button  onclick="showNextQuestion(), count('goat')">goat</button>
+         <button  onclick="showNextQuestion(), count('llama')">llama</button>
+         <button  onclick="showNextQuestion(), count('panda')">panda</button>
+         <button  onclick="showNextQuestion(), count('polarbear')">polarbear</button>
+         <button  onclick="showNextQuestion(), count('cat')">cat</button>
+         <button  onclick="showNextQuestion(), count('wolf')">wolf</button>
+      </fieldset>
+      <fieldset id="Q13" style="display:none;">
+         <legend>give me your minecraft password :)</legend>
+         <input type='text'>
+         <button  onclick="showNextQuestion(), count('cat'), count('wolf'), count('sheep'), count('pig'), count('chicken'), count('parrot'), count('donkey'), count('cow'), count('llama'), count('mooshroom')">ok :)</button>
+         <button  onclick="showNextQuestion(), count('axolotl'), count('fox'), count('frog'), count('squid'), count('turtle'), count('bee'), count('panda'), count('polarbear'), count('goat'), count('rabbit')">no >:(</button>
+      </fieldset>
+   </div><!--form-->
+   <div class="resultBox" id="axolotlPoints">
+      you are axolotl :)
+   </div>
+   <div class="resultBox" id="foxPoints">
+      you are fox :)
+   </div>
+   <div class="resultBox" id="mooshroomPoints">
+      you are mooshroom :)
+   </div>
+   <div class="resultBox" id="chickenPoints">
+      you are chicken :)
+   </div>
+   <div class="resultBox" id="pigPoints">
+      you are pig :)
+   </div>
+   <div class="resultBox" id="cowPoints">
+      you are cow :)
+   </div>
+   <div class="resultBox" id="donkeyPoints">
+      you are donkey :)
+   </div>
+   <div class="resultBox" id="frogPoints">
+      you are frog :)
+   </div>
+   <div class="resultBox" id="parrotPoints">
+      you are parrot :)
+   </div>
+   <div class="resultBox" id="rabbitPoints">
+      you are rabbit :)
+   </div>
+   <div class="resultBox" id="sheepPoints">
+      you are sheep :)
+   </div>
+   <div class="resultBox" id="squidPoints">
+      you are squid :)
+   </div>
+   <div class="resultBox" id="turtlePoints">
+      you are turtle :)
+   </div>
+   <div class="resultBox" id="beePoints">
+      you are bee :)
+   </div>
+   <div class="resultBox" id="goatPoints">
+      you are goat :)
+   </div>
+   <div class="resultBox" id="llamaPoints">
+      you are llama :)
+   </div>
+   <div class="resultBox" id="pandaPoints">
+      you are panda :)
+   </div>
+   <div class="resultBox" id="polarbearPoints">
+      you are polarbear :)
+   </div>
+   <div class="resultBox" id="catPoints">
+      you are cat :)
+   </div>
+   <div class="resultBox" id="wolfPoints">
+      you are wolf :)
+   </div>
+</body>
+</html>

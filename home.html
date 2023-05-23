@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DASH!!!</title>
+    <script>
+      function showhide(id) {
+        var element = document.getElementById(id);
+        if (element.style.display === "none") {
+          element.style.display = "flex";
+        } else {
+          element.style.display = "none";
+        }
+      }
+      function navchangecolor(id) {
+          var element = document.getElementById(id);
+          var color = element.style.color;
+          var bgcolor = element.style.backgroundColor;
+          element.style.backgroundColor = color;
+          element.style.color = bgcolor;
+      }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
+      :root{
+        /*SOLARIZED DARK*/
+        --SDblack:#002B36;
+        --SDdarkGray:#01313F;
+        --SDliteGray:#657B83;
+        --SDgray:#93A1A1;
+        --SDpink:#C8357D;
+        --SDgreen:#859900;
+        --SDteal:#2AA198;
+        --SDblue:#268BD2;
+        
+        /*idgaf!!! ill literally explode this entire computer!!! kill everyone!!!*/
+        --SDFmidl:#03535F;
+        --SDFblack:#00212A;
+        --SDFdarkTeal:#0F7179;
+        --SDFliteTeal:#56D2B7;
+        --SDFdarkGreen:#4C6F02;
+        --SDFliteGreen:#B5CD18;
+        --SDFdarkPink:#9A1271;
+        --SDFlitePink:#EC558A;
+        --SLFdarkWhite:#F1CCA2;
+        
+        /*SOLARIZED LIGHT*/
+        --SLwhite:#FDF6E3;
+        --SLeggshell:#FBF1D3;
+        }
+      body{
+        font-family: 'Ubuntu', sans-serif;
+        font-size:16px;
+        box-sizing:border-box;
+        background-image: url(https://media.discordapp.net/attachments/1047738694095863871/1062969037140787271/CARBUNCLE.png);
+        animation:scroll 64s linear infinite;
+        background-size:640px;
+        background-color:var(--SDteal);
+        image-rendering:pixelated;
+        }
+        @keyframes scroll{
+          from {background-position:0 0}
+          to {background-position:640px 480px}
+          }
+      
+      #leftside, main,{
+        color:var(--liteGray);
+        padding:10px;
+        }
+      
+      #container{max-width:1000px;margin-left:auto;margin-right:auto;}
+        #litlcontainer{border:4px solid var(--SDFmidl);margin-bottom:10px;}
+          article, marquee, iframe{margin:10px;}
+            article,marquee,iframe{margin-bottom:0;}
+      header{position:relative;width:100%;text-align:center;height:auto;font-size:0px;}
+      
+      nav{}
+        nav ul div{flex:1;border:none;}
+          nav a{display:block;padding:10px;font-weight:bold;text-decoration:none;text-align:center;color:inherit;}
+      
+      #wrapper{display:flex;flex-wrap:wrap-reverse;}
+      
+      #leftside{flex:1;min-width:222px;background-color:var(--SDdarkGray);}
+        #leftside .stamps img{margin:5px;}
+        #leftside button{background-color:var(--SDpink);border:2px solid var(--SDFdarkPink);color:var(--SLwhite);border-radius:20px;padding:10px;display:block;margin:10px auto 10px auto;font-weight:bold;font-size:20px;}
+          #leftside button:hover{background-color:var(--SDFdarkPink);color:var(--SLeggshell);}
+      
+      main{display:flex;flex-direction:column;background-color:var(--SDblack);flex:3;min-width:300px;}
+        main article{width:1fr;padding:10px;margin-top:10px;}
+        iframe{margin-top:10px;height:550px;overflow:scroll;border:4px solid var(--SDFblack);}
+        marquee{margin-top:10px;padding-top:4px;background-color:var(--SDFblack);border:2px solid var(--SDFblack);}
+          marquee img{height:31px;}
+      
+      #footer{display:flex;justify-content:center;}
+      
+      .funnybutton{position:absolute;display:block;width:25%;pointer-events:none;}
+        .funnybutton>.rotate{transition-duration: 0.25s;}
+          .funnybutton:hover>.rotate{filter:hue-rotate(-55deg);}
+      
+      .invert{transition-duration: 0.25s;}
+        .invert:hover{filter:invert(100%);}
+      
+      .linklist li{list-style:'-';}/*social media links*/
+        .linklist li a{text-decoration:none;color:var(--SLwhite);}
+          .linklist li:hover{text-decoration:underline;filter: drop-shadow(2px 2px 0 var(--SDFdarkGreen));}
+      
+      img{pointer-events:none;user-select:none;}
+      
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  </head>
+  
+  
+  
+<body>  
+  <div id=container>
+    <header><img style='pointer-events:none;position:absolute;width:100%;left:0;top:0;' src='/headerstars.png'><img style='display:block;width:100%;' src='/dash.png' alt='Dash!' /></header>
+    <div id=litlcontainer>
+      <nav>
+        <ul style='margin:0;padding:0;display:flex;'>
+          <div style='background-color:var(--SDblack);color:var(--SDpink)' id='nav1' onmouseout="navchangecolor('nav1')" onmouseover="navchangecolor('nav1')"><a href='/index'>home</a></div>
+          <div style='background-color:var(--SDblack);color:var(--SDteal)' id='nav2' onmouseout="navchangecolor('nav2')" onmouseover="navchangecolor('nav2')"><a href='/blog'>blog</a></div>
+          <div style='background-color:var(--SDblack);color:var(--SDgreen)' id='nav3' onmouseout="navchangecolor('nav3')" onmouseover="navchangecolor('nav3')"><a href='/art'>art</a></div>
+          <div style='background-color:var(--SDblack);color:var(--SDpink)' id='nav4' onmouseout="navchangecolor('nav4')" onmouseover="navchangecolor('nav4')"><a href='/about'>about</a></div>
+          <div style='background-color:var(--SDblack);color:var(--SDteal)' id='nav5' onmouseout="navchangecolor('nav5')" onmouseover="navchangecolor('nav5')"><a href='/sitemap'>sitemap</a></div>
+          <div style='background-color:var(--SDblack);color:var(--SDgreen)' id='nav6' onmouseout="navchangecolor('nav6')" onmouseover="navchangecolor('nav6')"><a href='https://biene.neocities.org'>old site</a></div>
+        </ul>
+      </nav>
+      <div class=funnybutton style='right:0;'>
+        <img class=rotate style='width:100%;pointer-events:none;position:absolute;' src='/stars.png'>
+          <a href='/explode'>
+          <svg style='width:100%;top:0;left:0;height:100%' xmlns="http://www.w3.org/2000/svg" 
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlns:krita="http://krita.org/namespaces/svg/krita"
+              xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+              width="341.991pt"
+              height="427.625pt"
+              viewBox="0 0 341.991 427.625">
+          <defs/>
+          
+          <path style='pointer-events:all;cursor:pointer;filter:opacity(0%);' id="shape0" transform="translate(38.8219095905557, 11.6757622828739)" fill="#ffffff" fill-rule="evenodd" d="M227.385 347.354L226.802 324.586L222.715 285.764L223.299 248.986L228.261 221.839L233.515 208.996L238.186 205.202L244.023 202.137L258.91 210.748L255.115 202.137L253.072 190.023L253.656 183.893L267.667 176.012L283.137 171.634L293.645 169.59L273.213 167.255L267.959 166.672L259.786 163.169L254.24 156.747L251.321 147.115L251.029 113.839L250.737 82.3141L251.321 70.0546L241.98 97.7845L236.142 110.336L229.429 117.05L219.796 123.179L215.418 123.471L206.369 112.963L195.277 90.7791L187.104 65.6762L185.937 82.3141L182.434 101.287L178.639 110.336L173.969 113.547L170.466 113.839L162.001 109.752L135.731 85.2331L96.6169 54.5842L79.1033 42.0327L37.0705 15.1785L12.5514 2.33515L0 0L41.449 32.4002L98.6602 91.0709L132.173 132.52L142.152 149.742L135.731 149.742L104.206 143.32L111.504 147.99L136.315 162.293L150.034 176.012L155.288 189.147L157.039 194.985L157.331 211.039L154.412 220.964L143.904 243.148L160.25 225.342L169.007 218.921L176.012 218.045L179.515 219.212L186.228 224.175L195.277 240.813L206.953 270.294L218.629 308.532Z" sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"/>
+          <path style='pointer-events:all;cursor:pointer;filter:opacity(0%);' id="shape1" transform="translate(7.88113954093987, 147.698392878355)" fill="#ffffff" fill-rule="evenodd" d="M0 0L48.7463 30.357L54.2923 31.8165L57.795 31.2327L59.2545 20.1407L65.6762 33.5678L70.3465 35.903L89.6115 25.9786L82.606 34.7354L79.1033 43.2003L80.8547 46.703L100.412 56.0437L127.558 66.114L114.131 66.114L88.152 61.2978L76.7681 62.4653L69.1789 66.114L65.6762 74.433L65.0924 80.5628L62.7572 71.2221L63.0491 66.114L57.795 62.7572L49.0382 66.114L34.7354 70.6384L42.9084 62.7572L49.622 56.0437L50.4977 52.249L44.9517 41.1571L33.8597 29.1894L6.71356 6.12978Z" sodipodi:nodetypes="ccccccccccccccccccccccccccccccc"/>
+          <path style='pointer-events:all;cursor:pointer;filter:opacity(0%);' id="shape2" transform="translate(106.541330831224, 268.542532506099)" fill="#ffffff" fill-rule="evenodd" d="M0 0L34.4435 28.8975L54.2923 52.249L58.0869 54.0004L60.714 50.7896L61.2978 36.7787L64.454 38.8219L67.7194 56.0437L71.2221 62.4653L74.1411 61.8815L85.525 49.3301L83.1898 68.3032L85.525 78.5195L93.4061 86.9844L115.59 92.5304L102.163 95.1575L96.9088 98.3683L94.2818 103.33L94.5737 117.341L101.287 149.742L83.4817 122.596L74.7249 115.006L69.4708 114.714L64.454 118.801L57.5031 126.682L58.9626 109.168L54.5842 98.9521L48.4544 92.8223L24.5191 85.8169L31.5246 83.1898L40.8652 79.6871L43.2003 72.3897L40.2814 62.4653L26.8543 37.6543L10.2163 13.719Z" sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccc"/>
+          </svg>
+        </a>
+      </div><!--stars-->
+      <div id=wrapper>
+        <div id=leftside>
+          <button class="button" onclick="showhide('blinkymarquee');showhide('stampdiv');showhide('buttonmarquee');showhide('buttondiv');">toggle marquee</button>
+          <a style='display:block;margin:10px;' href='https://dashweb.neocities.org/quizzes.html'><img class='invert' style='width:100%;pointer-events:all;' src='/images/quizzes.png'></a>
+          <article style='border-left:4px solid var(--SDFliteTeal);border-top:4px solid var(--SDFliteTeal);border-right:4px solid var(--SDFdarkTeal);border-bottom:4px solid var(--SDFdarkTeal);font-family: "VT323", monospace;'>
+          <h1 style='font-size:20px;color:var(--SLwhite);background-color:var(--SDteal);margin:0;border:4px solid var(--SDteal);text-shadow: 2px 1px var(--SDFdarkTeal);'>
+            ⨉ Welcome!
+          </h1>
+          <div style='border:4px solid var(--SDteal);'>
+            <p style='background-color:var(--SLwhite);color:var(--SDblack);border-left:4px solid var(--SDFdarkTeal);border-top:4px solid var(--SDFdarkTeal);border-right:4px solid var(--SDFliteTeal);border-bottom:4px solid var(--SDFliteTeal);padding:5px;margin:0;'>
+              Welcome to the official site of Dash! I started learning html in november of 2022 and it has been my favorite hobby since then!
+            </p>
+          </div>
+          </article><!--welcome message-->
+          <article style='color:var(--SLwhite);text-align:center;background-color:var(--SDblack);border-bottom:4px solid var(--SDFmidl);border-right:4px solid var(--SDFmidl);border-top:4px solid var(--SDFblack);border-left:4px solid var(--SDFblack);'>
+            <p style='filter:drop-shadow(2px 0 var(--SDFdarkTeal));'><b>⚠COOL NEW HOBBY⚠</b></p>
+            <a style='display:block;width:min-content;margin-left:auto;margin-right:auto;' class='invert' target='_blank' href='https://blaseball.com/'><img style='width:100px;margin-left:auto;margin-right:auto;' src='https://blaseball-icons.s3.us-west-2.amazonaws.com/header-image.png'></a>
+            <p style='filter:drop-shadow(2px 0 var(--SDFdarkTeal));'>Blaseball :)</p>
+          </article><!--blaseball-->
+          <article style='background-image:url(https://biene.neocities.org/images/flowers2.png);border:4px solid var(--black);width:1fr;'>
+            <div style='border:2px solid #222222;background-color:#333333;font-family: "Courier Prime", monospace;text-align:center;color:#cccccc;'>
+              <a style='display:flex;' href='https://biene.neocities.org/webringlist.html'><img style='flex-grow:1;border:2px solid #222222;' src="https://piskel-imgstore-b.appspot.com/img/b8df4c02-8ff7-11ed-bbbe-c9d806ba7f1a.gif"></a>
+              <h1 style='font-size:inherit;font-weight:inherit;'>FIVE DOLLAR WEBRING</h1>
+              <div style='border:2px solid #222222;background-color:#cccccc;padding:5px;color:#669922;'>
+                <a style='text-decoration:none;color:#669922' href='https://zache.neocities.org/'>⮜</a> | <a style='color:#669922;text-decoration:none;' href='https://biene.neocities.org/webringlist.html'>list</a> | <a style='text-decoration:none;color:#669922;' href='https://woolie.neocities.org/'>⮞</a>
+              </div>
+            </div>
+          </article><!--$5webring$5-->
+          <article style='font-size:0;display:flex;width:1fr;'>
+            <div style='flex:1;'>
+              <img style="height:auto;width:100%;" src="https://dashweb.neocities.org/dashbutton.gif">
+            </div>
+            <div style='flex:1;'>
+              <img style="height:auto;width:100%;" src="https://dashweb.neocities.org/dashbutton.gif">
+            </div>
+            <div style='flex:1;'>
+              <img style="height:auto;width:100%;" src="https://dashweb.neocities.org/dashbutton.gif">
+            </div>
+          </article><!--dash buttons-->
+          <article style='margin-top:0;margin-bottom:0;'>
+          <textarea style="box-sizing:border-box;width:100%;resize:none;background-color:var(--SLeggshell);color:var(--SDliteGray);border:2px solid var(--SDFdarkTeal);box-sizing:border-box;" readonly="">&lt;a href="https://dashweb.neocities.org/" target="_blank"&gt;&lt;img src="https://dashweb.neocities.org/dashbutton.gif"&gt;&lt;/a&gt;</textarea></article><!--dash button code-->
+          <article style='margin-top:0;font-size:0;display:flex;width:1fr;'>
+            <div style='flex:1;'>
+              <img style="height:auto;width:100%;" src="https://dashweb.neocities.org/dashbutton.gif">
+            </div>
+            <div style='flex:1;'>
+              <img style="height:auto;width:100%;" src="https://dashweb.neocities.org/dashbutton.gif">
+            </div>
+            <div style='flex:1;'>
+              <img style="height:auto;width:100%;" src="https://dashweb.neocities.org/dashbutton.gif">
+            </div>
+          </article><!--dash buttons-->
+          <article class='stamps' style='max-height:230px;overflow:scroll;display:flex;flex-wrap:wrap;justify-content:center;margin-top:10px;padding-top:4px;background-color:var(--SDFblack);border:2px solid var(--SDFblack);'>
+            <img src="https://atomicgothic.neocities.org/atomic%20gothic%20test/gifs/queer.gif">
+            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a8285265-1d77-434c-a517-c09b60695ce7/daqejry-7200abed-a2dc-42f9-bb3c-070fcd2db079.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2E4Mjg1MjY1LTFkNzctNDM0Yy1hNTE3LWMwOWI2MDY5NWNlN1wvZGFxZWpyeS03MjAwYWJlZC1hMmRjLTQyZjktYmIzYy0wNzBmY2QyZGIwNzkucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.g3N70d0xY3--X0QIXN4SNEQn4CfHFs_JcK-TVWVFbGs">
+            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8efd678d-ca57-4ac2-8c46-3bf9c970b05b/d2sr8wp-b49a27ec-c495-433f-a8a0-26b501625d67.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhlZmQ2NzhkLWNhNTctNGFjMi04YzQ2LTNiZjljOTcwYjA1YlwvZDJzcjh3cC1iNDlhMjdlYy1jNDk1LTQzM2YtYThhMC0yNmI1MDE2MjVkNjcuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.3P-PaS3rN9cFTTAPjKhchuz_M4te4nOuM4miaOEfd-s">
+            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3d3655b7-467f-4394-ac71-50e0c1dfcff8/dd6wksn-eb0c5457-c5fd-4c3c-a59a-684108980b08.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzNkMzY1NWI3LTQ2N2YtNDM5NC1hYzcxLTUwZTBjMWRmY2ZmOFwvZGQ2d2tzbi1lYjBjNTQ1Ny1jNWZkLTRjM2MtYTU5YS02ODQxMDg5ODBiMDgucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.PHiTw84Df9tCtcXFoO89qqWqFuTJYuDuxR8PDOP-lUs">
+            <img src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/283d2684-20e9-417b-ab83-38e5104b86b5/dc1jkij-243d26c4-9446-44e7-8e23-792d0e9950c3.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzI4M2QyNjg0LTIwZTktNDE3Yi1hYjgzLTM4ZTUxMDRiODZiNVwvZGMxamtpai0yNDNkMjZjNC05NDQ2LTQ0ZTctOGUyMy03OTJkMGU5OTUwYzMuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.gslQbanCZGDiX5uj5AAApcIt0jpi2d06ww7H4m82v_Y'>
+            <img src='https://pomelo.lol/pix/stamps/nu/vidya/dccgqbv-da38bef6-45a4-4c18-87b4-76db96b4c8ae.png'>
+            <img src='https://pomelo.lol/pix/stamps/nu/d262h0y-be180fa9-8b52-4207-8d84-98b166c378db.gif'>
+            <img src='https://pomelo.lol/pix/stamps/d7zqrzs-644569e8-ae32-4ce4-b888-36b902cbeac8.png'>
+            <img src='https://cdn.discordapp.com/attachments/1047738694095863871/1059734380991496222/megamindstamp.gif'>
+            <img src='https://kopawz.neocities.org/stamphoard/stamps3/tobyfox.gif'>
+            <img src='https://heyitsharbor.neocities.org/images/rainbowheartstamp.gif'>
+            <img src='https://heyitsharbor.neocities.org/images/totallyrad.gif'>
+          </article>
+          <p style='text-align:center;color:var(--SLeggshell);filter:drop-shadow(2px 2px 0 var(--SDFblack));margin:10px;'>Email me if you have questions! dashontheweb@proton.me</p>
+          <div style='position:relative;'><a style='position:absolute' href='/paintchip.html'><img style='position:relative;left:50px;top:50px;' src='/images/mobwalkin.png'></a></div>
+        </div><!--leftside-->
+        <main>
+          <article id='buttondiv' style='background-color:var(--SDFblack);flex-wrap:wrap;justify-content:center;display:none;margin-bottom:0;border:4px solid var(--SDFblack);'>
+            <a href="https://woolie.neocities.org/" target="_blank"><img src="https://woolie.neocities.org/button.png" alt="woolie's neocities"></a>
+            <a href="https://twelvemen.neocities.org/" target='_blank'><img src="https://twelvemen.neocities.org/12men.gif" alt="twelvemen neocities"></a>
+            <a href="https://atomicgothic.neocities.org/" target='_blank'><img src="https://atomicgothic.neocities.org/atomic%20gothic%20test/gifs/ag_main_button.gif" alt="atomic gothic neocities"></a>
+            <a href="https://softannalee.neocities.org" target='_blank'><img src="https://softannalee.neocities.org/img/banner.gif" alt="softannalee neocities"></a>
+            <a href='https://plasticdino.neocities.org/' target='_blank'><img src="https://plasticdino.neocities.org/buttons/plasticdino.gif" alt="plasticdino neocities"></a>
+            <a href="https://kotatsus.neocities.org" target='_blank' title="link back to us!" class=""><img src="https://kotatsus.neocities.org/kotatsumebutton.gif" alt="kotatsu.me"></a>
+            <a href='https://graysplace.neocities.org/' target='_blank'><img src="https://graysplace.neocities.org/grays.gif" alt="grays place"></a>
+            <a href='https://birbss.neocities.org' target="_Blank"><img src="https://birbss.neocities.org/rubybutton2.png" alt="birbss"></a>
+            <a href="https://googol.neocities.org/" target='_blank'><img src="https://googol.neocities.org/googol_thumb.gif" alt="googol.gov"></a>
+            <a href="https://tileerror.neocities.org/" target="_blank"><img src="https://tileerror.neocities.org/images/ton.png" alt="tileerror's neocities"></a>
+            <a target="_Blank" href="https://caseolum.neocities.org"><img src="https://caseolum.neocities.org/Caseolumbutton.png" alt="caseolum's neocities"></a>
+            <a href='https://zache.neocities.org' target='_blank'><img src='https://zache.neocities.org/zachbutton.png' alt="zach's neocities" title="best site on the web"></a>
+            <a href="https://heyitsharbor.neocities.org/" target='_blank'><img src="https://heyitsharbor.neocities.org/images/button_for_harbor.gif"></a>
+            <a href="https://niconiconova.neocities.org/" target='_blank'><img src="https://niconiconova.neocities.org/button.png"></a>
+            <a href='https://meteoriterose.neocities.org' target='_blank'><img src="https://meteoriterose.neocities.org/static/images/8utton.gif" alt="meteorite rose"></a>
+            <a href="https://cloverbell.neocities.org/" target='_blank'><img alt=cloverbell src="https://cloverbell.neocities.org/icons/cloverbellbanner.gif"></a> 
+            <a href='https://ninacti0n.neocities.org/' target='_blank'><img alt=ninacti0n src='https://ninacti0n.neocities.org/assets/RS%20animated%20button.gif'></a>
+          </article>
+          <marquee id='buttonmarquee' style='margin-bottom:0;' hspace=0>
+            <a href="https://woolie.neocities.org/" target="_blank"><img src="https://woolie.neocities.org/button.png" alt="woolie's neocities"></a>
+            <a href="https://twelvemen.neocities.org/" target='_blank'><img src="https://twelvemen.neocities.org/12men.gif" alt="twelvemen neocities"></a>
+            <a href="https://atomicgothic.neocities.org/" target='_blank'><img src="https://atomicgothic.neocities.org/atomic%20gothic%20test/gifs/ag_main_button.gif" alt="atomic gothic neocities"></a>
+            <a href="https://softannalee.neocities.org" target='_blank'><img src="https://softannalee.neocities.org/img/banner.gif" alt="softannalee neocities"></a>
+            <a href='https://plasticdino.neocities.org/' target='_blank'><img src="https://plasticdino.neocities.org/buttons/plasticdino.gif" alt="plasticdino neocities"></a>
+            <a href="https://kotatsus.neocities.org" target='_blank' title="link back to us!" class=""><img src="https://kotatsus.neocities.org/kotatsumebutton.gif" alt="kotatsu.me"></a>
+            <a href='https://graysplace.neocities.org/' target='_blank'><img src="https://graysplace.neocities.org/grays.gif" alt="grays place"></a>
+            <a href='https://birbss.neocities.org' target="_Blank"><img src="https://birbss.neocities.org/rubybutton2.png" alt="birbss"></a>
+            <a href="https://googol.neocities.org/" target='_blank'><img src="https://googol.neocities.org/googol_thumb.gif" alt="googol.gov"></a>
+            <a href="https://tileerror.neocities.org/" target="_blank"><img src="https://tileerror.neocities.org/images/ton.png" alt="tileerror's neocities"></a>
+            <a href="https://caseolum.neocities.org" target="_Blank"><img src="https://caseolum.neocities.org/Caseolumbutton.png" alt="caseolum's neocities"></a>
+            <a href='https://zache.neocities.org' target='_blank'><img src='https://zache.neocities.org/zachbutton.png' alt="zach's neocities" title="best site on the web"></a>
+            <a href="https://heyitsharbor.neocities.org/" target='_blank'><img src="https://heyitsharbor.neocities.org/images/button_for_harbor.gif"></a>
+            <a href="https://niconiconova.neocities.org/" target='_blank'><img src="https://niconiconova.neocities.org/button.png"></a>
+            <a href='https://meteoriterose.neocities.org' target='_blank'><img src="https://meteoriterose.neocities.org/static/images/8utton.gif" alt="meteorite rose"></a>
+            <a href="https://cloverbell.neocities.org/" target='_blank'><img alt=cloverbell src="https://cloverbell.neocities.org/icons/cloverbellbanner.gif"></a>
+            <a href='https://ninacti0n.neocities.org/' target='_blank'><img alt=ninacti0n src='https://ninacti0n.neocities.org/assets/RS%20animated%20button.gif'></a>
+          </marquee>
+          <iframe src=/devlog.html title='site updates'></iframe>
+          <article style='padding:20px;text-align:center;border-top:4px solid var(--SDFlitePink);border-left:4px solid var(--SDFlitePink);border-bottom:4px solid var(--SDFdarkPink);border-right:4px solid var(--SDFdarkPink);background-color:var(--SDpink);color:var(--SLwhite)'>
+            <h1 style='margin-top:0;font-size:inherit;'>About Me!</h1>
+            <h3 style='font-size:16px;font-weight:normal;'>Dash | 18 | He/She</h3>
+            <p style='margin-bottom:0;'>
+              Hi my name is Dash and this is my neocities! I am in school to be an artist and computer scientist! probably bit off more than i can chew there but thats a future me problem. Web design is really different from the art I normally do but its been a lot of fun figuring it out! i am so grateful to my friends who help me and learn with me! 
+            </p>
+          </article>
+          <article style='display:flex;gap:10px;padding:0;'>
+            <div style='padding:20px;flex:1;background-color:var(--SDteal);color:var(--SLwhite);border-top:4px solid var(--SDFliteTeal);border-left:4px solid var(--SDFliteTeal);border-bottom:4px solid var(--SDFdarkTeal);border-right:4px solid var(--SDFdarkTeal);'>
+              <h1 style='font-size:inherit;margin:0;'>To Do:</h1>
+              <ul style='margin-bottom:0;'>
+                <li style='text-decoration:line-through;'>update button
+                <li>get onionring set up for the webring
+                <li style='text-decoration:line-through;'>make welcome page
+                <li style='text-decoration:line-through;'>add old pages (art recipes etc)
+                <li>replace marquee with js
+                <li style='text-decoration:line-through;'>switch nav style
+                <li style='text-decoration:line-through;'>fix mob
+                <li>fix about
+                <li style='text-decoration:line-through;'>fix art
+                <li>add more of my art
+                <li>add links page
+                <li>fix explode
+              </ul>
+            </div>
+            <div class='linklist' style='text-align:center;padding:20px;flex:1;background-color:var(--SDgreen);color:var(--SLwhite);border-top:4px solid var(--SDFliteGreen);border-left:4px solid var(--SDFliteGreen);border-bottom:4px solid var(--SDFdarkGreen);border-right:4px solid var(--SDFdarkGreen);'>
+              <h1 style='font-size:inherit;margin:0;'>Links:</h1>
+              <ul style='padding:0;margin-bottom:0;'>
+                <li><a target='_blank' href='https://www.tumblr.com/blog/thebiene'>tumblr</a>
+                <li><a target='_blank' href='https://www.instagram.com/pollenbomb/?hl=en'>instagram</a>
+                <li><a target='_blank' href='https://neocities.org/site/dashweb'>neocities</a>
+                <li><a target='_blank' href='https://www.last.fm/user/thebiene'>lastfm</a>
+              </ul>
+            </div>
+          </article>
+          <article>
+            <h1 style='margin:0;text-align:center;color:var(--SLwhite);'>repeating patterns!</h1>
+            <p style='margin:0;margin-top:1em;text-align:center;color:var(--SLwhite);'>I drew all of these feel free to use them on your website!</p>
+            <div style='padding:0;display:flex;flex-wrap:wrap;'>
+              <div style='flex:1;margin:20px;padding:2px;border:2px solid var(--SLwhite);box-sizing:border-box;'>
+                <a href='/images/Pinkcat.png' download='/images/Pinkcat.png'><img style='pointer-events:all;display:block;width:100%;border:4px solid var(--SLwhite);box-sizing:border-box;' src='/images/Pinkcatrepeat.png' onmouseover="this.src='https://dashweb.neocities.org/images/Pinkcat.png'" onmouseout="this.src='https://dashweb.neocities.org/images/Pinkcatrepeat.png'"></a>
+              </div>
+              <div style='flex:1;margin:20px;padding:2px;border:2px solid var(--SLwhite);box-sizing:border-box;'>
+                <a href='/images/Sharks.png' download='/images/Sharks.png'><img style='pointer-events:all;display:block;width:100%;border:4px solid var(--SLwhite);box-sizing:border-box;' src='/images/Sharksrepeat.png' onmouseover="this.src='https://dashweb.neocities.org/images/Sharks.png'" onmouseout="this.src='https://dashweb.neocities.org/images/Sharksrepeat.png'"></a>
+              </div>
+              <div style='flex:1;margin:20px;padding:2px;border:2px solid var(--SLwhite);box-sizing:border-box;'>
+                <a href='/images/flowers.png' download='/images/flowers.png'><img style='pointer-events:all;display:block;width:100%;border:4px solid var(--SLwhite);box-sizing:border-box;' src='/images/flowersrepeat.png' onmouseover="this.src='https://dashweb.neocities.org/images/flowers.png'" onmouseout="this.src='https://dashweb.neocities.org/images/flowersrepeat.png'"></a>
+              </div>
+            </div>
+          </article>
+          <article id='stampdiv' style='margin-bottom:10px;background-color:var(--SDFblack);flex-wrap:wrap;justify-content:center;display:none;border:4px solid var(--SDFblack);'>
+            <img src="https://atomicgothic.neocities.org/atomic%20gothic%20test/gifs/biohazard.gif">
+            <img src="https://atomicgothic.neocities.org/atomic%20gothic%20test/gifs/caution.gif">
+            <img src="https://atomicgothic.neocities.org/atomic%20gothic%20test/gifs/unkillable.gif">
+            <img src="https://atomicgothic.neocities.org/atomic%20gothic%20test/gifs/tranz.gif">
+            <img src="https://atomicgothic.neocities.org/atomic%20gothic%20test/gifs/labelblinkie.gif">
+            <img src="https://atomicgothic.neocities.org/atomic%20gothic%20test/gifs/artist.gif">
+            <img src="https://atomicgothic.neocities.org/atomic%20gothic%20test/gifs/snaklvr.gif">
+            <img src="https://graysplace.neocities.org/AAA.gif">
+            <img src='https://niconiconova.neocities.org/66666.gif'>
+            <img src='https://niconiconova.neocities.org/33333.gif'>
+            <img src='https://niconiconova.neocities.org/22222.gif'>
+            <img src='https://buttonwall.neocities.org/getfirefox.gif'>
+            <img src='https://disc-content.neocities.org/graphics/anti-fascist.gif'>
+            <img src='https://atomicgothic.neocities.org/atomic%20gothic%20test/gifs/neocitiesaddict.gif'>
+            <img src='https://atomicgothic.neocities.org/atomic%20gothic%20test/gifs/neocitiesbutton1.gif'>
+            <img src='https://atomicgothic.neocities.org/atomic%20gothic%20test/gifs/delete_twitter.gif'>
+            <img src='https://atomicgothic.neocities.org/atomic%20gothic%20test/gifs/only-listen-100gecs.gif'>
+            <img src='https://atomicgothic.neocities.org/atomic%20gothic%20test/gifs/button253.gif'>
+            <img src='https://64.media.tumblr.com/de200764b96d8e61a7d571a6b9da504e/250d5bfbf697afd4-fd/s100x200/0afc7698ed4651b3aae52ff710b6154404057c36.pnj'>
+            <img src='https://64.media.tumblr.com/55930a4374b71e2157afeca066ed9868/250d5bfbf697afd4-91/s100x200/2d25010d6380e022d9ea283ce43415bbf29a00e4.gifv'>
+            <img src='https://cdn.discordapp.com/attachments/1065797445650497587/1065845927199395850/3dsbutton.png'>
+            <img src='https://cdn.discordapp.com/attachments/1056371231097622628/1065853862180818995/vscode.gif'>
+            <img src='https://cdn.discordapp.com/attachments/1047738694095863871/1065861555016716348/bevelba2.gif'>
+          </article>
+          <marquee id='blinkymarquee' style='margin-bottom:10px;' hspace=0>
+            <img src="https://atomicgothic.neocities.org/atomic%20gothic%20test/gifs/biohazard.gif">
+            <img src="https://atomicgothic.neocities.org/atomic%20gothic%20test/gifs/caution.gif">
+            <img src="https://atomicgothic.neocities.org/atomic%20gothic%20test/gifs/unkillable.gif">
+            <img src="https://atomicgothic.neocities.org/atomic%20gothic%20test/gifs/tranz.gif">
+            <img src="https://atomicgothic.neocities.org/atomic%20gothic%20test/gifs/labelblinkie.gif">
+            <img src="https://atomicgothic.neocities.org/atomic%20gothic%20test/gifs/artist.gif">
+            <img src="https://atomicgothic.neocities.org/atomic%20gothic%20test/gifs/snaklvr.gif">
+            <img src="https://graysplace.neocities.org/AAA.gif">
+            <img src='https://niconiconova.neocities.org/66666.gif'>
+            <img src='https://niconiconova.neocities.org/33333.gif'>
+            <img src='https://niconiconova.neocities.org/22222.gif'>
+            <img src='https://buttonwall.neocities.org/getfirefox.gif'>
+            <img src='https://disc-content.neocities.org/graphics/anti-fascist.gif'>
+            <img src='https://atomicgothic.neocities.org/atomic%20gothic%20test/gifs/neocitiesaddict.gif'>
+            <img src='https://atomicgothic.neocities.org/atomic%20gothic%20test/gifs/neocitiesbutton1.gif'>
+            <img src='https://atomicgothic.neocities.org/atomic%20gothic%20test/gifs/delete_twitter.gif'>
+            <img src='https://atomicgothic.neocities.org/atomic%20gothic%20test/gifs/only-listen-100gecs.gif'>
+            <img src='https://atomicgothic.neocities.org/atomic%20gothic%20test/gifs/button253.gif'>
+            <img src='https://64.media.tumblr.com/de200764b96d8e61a7d571a6b9da504e/250d5bfbf697afd4-fd/s100x200/0afc7698ed4651b3aae52ff710b6154404057c36.pnj'>
+            <img src='https://64.media.tumblr.com/55930a4374b71e2157afeca066ed9868/250d5bfbf697afd4-91/s100x200/2d25010d6380e022d9ea283ce43415bbf29a00e4.gifv'>
+            <img src='https://cdn.discordapp.com/attachments/1065797445650497587/1065845927199395850/3dsbutton.png'>
+            <img src='https://cdn.discordapp.com/attachments/1056371231097622628/1065853862180818995/vscode.gif'>
+            <img src='https://cdn.discordapp.com/attachments/1047738694095863871/1065861555016716348/bevelba2.gif'>
+          </marquee>
+        </main>
+      </div><!--wrapper-->
+    </div><!--litlcontainer-->
+    <div id=footer style='position:relative;'>
+      
+      <a class='invert' rel="license" href="/copyright"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+      <a class='invert' href="https://code.visualstudio.com/" target="_blank"><img src="https://neonriser.neocities.org/button/vsCode.png" alt="Visual Studio Code" title="Made in Visual Studio Code"></a>
+      <a class='invert' href=https://neocities.org><img src='https://anlucas.neocities.org/neocities_button.gif'></a>
+    </div><!--footer-->
+  </div><!--container--> 
+</body>
+</html>

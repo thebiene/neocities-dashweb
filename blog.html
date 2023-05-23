@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DASH BLOG</title>
+    <script>
+      function show(y) {
+        var x = document.getElementById(y);
+          x.style.display = "block";
+      }
+      function hide(y) {
+        var x =document.getElementById(y);
+          x.style.display = "none";
+      }
+    </script>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
+      :root{
+        --SDblack:#002B36;
+        --SDdarkGray:#01313F;
+        --SDliteGray:#657B83;
+        --SDgray:#93A1A1;
+        --SDpink:#C8357D;
+        --SDgreen:#859900;
+        --SDteal:#2AA198;
+        --SDblue:#268BD2;
+        --SDFmidl:#03535F;
+        --SDFblack:#00212A;
+        --SDFdarkTeal:#0F7179;
+        --SDFliteTeal:#56D2B7;
+        --SDFdarkGreen:#4C6F02;
+        --SDFliteGreen:#B5CD18;
+        --SDFdarkPink:#9A1271;
+        --SDFlitePink:#EC558A;
+        --SLFdarkWhite:#F1CCA2;
+        --SLwhite:#FDF6E3;
+        --SLeggshell:#FBF1D3;
+        }
+      
+      body{
+        font-family: 'Ubuntu', sans-serif;
+        font-size:16px;
+        box-sizing:border-box;
+        background-image: url(https://media.discordapp.net/attachments/1047738694095863871/1062969037140787271/CARBUNCLE.png);
+        animation:scroll 64s linear infinite;
+        background-size:640px;
+        background-color:var(--SDteal);
+        image-rendering:pixelated;
+        color:var(--SDliteGray);
+        }
+        @keyframes scroll{
+          from {background-position:0 0}
+          to {background-position:640px 480px}
+          }
+      
+      #wrapper {position:relative;margin:5vw;margin-bottom:8px;height:auto;}
+      
+      #container {
+        width:100%;height:100%;min-height:80vh;background-color:var(--SDdarkGray);padding:8px;
+        border-top:4px solid var(--SDFmidl);border-left:4px solid var(--SDFmidl);border-right:4px solid var(--SDFblack);border-bottom:4px solid var(--SDFblack);
+        display: grid; 
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+        grid-template-rows: 40px 1fr; 
+        gap: 8px 8px; 
+        grid-template-areas: 
+        "nav nav nav nav nav"
+        "index main main main main"; 
+        }
+        .nav {grid-area:nav;}
+        .index {grid-area:index;background-color:var(--SLwhite);padding:2vw;
+          border-top:4px solid var(--SDFblack);border-left:4px solid var(--SDFblack);
+          border-right:4px solid var(--SDFmidl);border-bottom:4px solid var(--SDFmidl);
+          }
+        main {
+          grid-area:main;background-color:var(--SLwhite);padding:2vw;
+          border-top:4px solid var(--SDFblack);border-left:4px solid var(--SDFblack);
+          border-right:4px solid var(--SDFmidl);border-bottom:4px solid var(--SDFmidl);
+          }
+          main h1{margin-top:0;}
+          main h2{font-size:16px;}
+          main h3{font-size:16px;font-weight:normal;color:var(--SDgray);}
+          main ul{border:6px double var(--SDliteGray); margin:0;padding:1em;box-sizing:border-box;width:100%;}
+            main li{list-style:inside '-';margin-bottom:0.5em;}
+              main li:last-child{margin-bottom:0;}
+      
+      nav{display:flex;gap:8px;height:100%;font-weight:bold;}
+        nav a{display:block;flex:1;padding:5px;text-align:center;text-decoration:none;color:var(--SLwhite);}
+          nav a:hover{text-decoration:underline;color:var(--SLeggshell);}
+      
+      #footer{display:flex;justify-content:center;gap:8px;}
+      
+      .invert{transition-duration: 0.25s;}
+        .invert:hover{filter:invert(100%);}
+      
+      .pink{
+        border-top:4px solid var(--SDFlitePink);
+        border-left:4px solid var(--SDFlitePink);
+        border-right:4px solid var(--SDFdarkPink);
+        border-bottom:4px solid var(--SDFdarkPink);
+        background-color:var(--SDpink);
+        }
+        .pink:hover{
+          border-top:4px solid var(--SDFdarkPink);
+          border-left:4px solid var(--SDFdarkPink);
+          border-right:4px solid var(--SDFlitePink);
+          border-bottom:4px solid var(--SDFlitePink);
+          }
+      
+      .teal{
+        border-top:4px solid var(--SDFliteTeal);
+        border-left:4px solid var(--SDFliteTeal);
+        border-right:4px solid var(--SDFdarkTeal);
+        border-bottom:4px solid var(--SDFdarkTeal);
+        background-color:var(--SDteal);
+        }
+        .teal:hover{
+          border-top:4px solid var(--SDFdarkTeal);
+          border-left:4px solid var(--SDFdarkTeal);
+          border-right:4px solid var(--SDFliteTeal);
+          border-bottom:4px solid var(--SDFliteTeal);
+          }
+      
+      .green{
+        border-top:4px solid var(--SDFliteGreen);
+        border-left:4px solid var(--SDFliteGreen);
+        border-right:4px solid var(--SDFdarkGreen);
+        border-bottom:4px solid var(--SDFdarkGreen);
+        background-color:var(--SDgreen);
+        }
+        .green:hover{
+          border-top:4px solid var(--SDFdarkGreen);
+          border-left:4px solid var(--SDFdarkGreen);
+          border-right:4px solid var(--SDFliteGreen);
+          border-bottom:4px solid var(--SDFliteGreen);
+          }
+      
+      .index ul{margin:0;padding:0;}
+        .index li{list-style:none;margin-top:2vw;margin-bottom:2vw;}
+          .index li button{border:none;background-color:#ffffff00;color:var(--SDliteGray);font-weight:bold;font-family: 'Ubuntu', sans-serif;font-size:16px;}
+            .index li:hover>button{color:var(--SDgray);filter:drop-shadow(2px 2px 0 var(--SLeggshell));text-decoration:underline;}
+      
+      #welcome{display:block}
+      #lentils{display:none;}
+      #journal{display:none;}
+      #pasta{display:none;}
+      
+      section{border:6px double var(--SDliteGray);padding:1.5em;margin-bottom:10px;}
+      section p{margin:0;}
+      section h3{font-size:inherit;font-weight:inherit;color:var(--SDFdarkPink);}
+    </style>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  <body>
+    <div id=wrapper>
+      <div id="container">
+        <div class="nav">
+          <nav>
+            <a class=pink href='/home'>Home</a>
+            <a class=teal href='/blog'>blog</a>
+            <a class=green href='/art'>art</a>
+            <a class=pink href='/about'>about</a>
+            <a class=teal href='/sitemap'>sitemap</a>
+          </nav>
+        </div>
+        <div class="index">
+          <div>
+            <h2>index</h2>
+            <ul>
+              <li><button onclick="hide('welcome'), hide('journal'), hide('pasta'), show('lentils')">Soup Recipe</button>13/1/23
+              <li><button onclick="hide('welcome'), hide('journal'), hide('lentils'), show('pasta')">Pasta Recipe</button>12/3/23
+              <li><button onclick="hide('welcome'), hide('lentils'), hide('pasta'), show('journal')">Daily Blog</button>
+            </ul>
+          </div>
+        </div>
+        <main>
+          <article id='welcome'>
+            <header>
+              <h1>Dash's Blog</h1>
+              <p>welcome to my blog! I am not big on writing so there probably wont be many posts. enjoy!</p>
+            </header>
+          </article>
+          <article id='pasta'>
+            <h1>pasta carbonara with ollie [IN PROGRESS][NOT FINISHED]</h1>
+            <h2>ingredients:</h2>
+            <ul>
+              <li>pasta (spagghetti is best)
+              <li>mushrooms
+              <li>bacon
+              <li>eggs
+              <li>onion
+              <li>garlic
+              <li>red pepper
+              <li>black pepper
+              <li>oregono
+              <li>salt
+              <li>olive oil
+              <li>
+            </ul>
+          </article>
+          <article id='lentils'>
+            <h1>rice cooker lentil soup</h1>
+            <h3>note that this soup can be made on the stove and it will be better that way but i live in a dorm so my cooking oppurtunities are not so great</h3>
+            <h2>ingredience:</h2>
+            <ul>
+              <li>black lentils
+              <li>tom yum paste
+              <li>chives
+              <li>cilantro
+              <li>tomatoes
+              <li>cut wakame
+              <li>dashi
+              <li>black eyed peas
+              <li>veggies of choice
+            </ul>
+            <p>any of these ingredients can be substituted or left out, but doing so will affect things like cooking time or the amount of water you need!</p>
+            <h2>step 1: cook them</h2>
+            <h3>*if you are using black eyed peas or any ofther legumes you have to soak them first, time varies*</h3>
+            <p>put lentils in the rice cooker, and for every cup of lentils put 1.5 cups of water. for 1 serving i will add 1tsp of tom yum paste and a tiny bit of dashi, but that is up to taste. if you have veggies that want to be cooked, add those in too.</p>
+            <p>once everything is in you can just turn on the rice cooker :)</p>
+            <h2>step 2:</h2>
+            
+            <p>now that everything is cooked, you can add fresh ingredients. Here i will add chopped chives, cilantro, and cut wakame (but any kind of dried seaweed will be good) also things like tomatoes and leafy greens can be cooked, but can also be added fresh either way is good.</p>
+            <h2>step 3: eat it</h2>
+            
+            <p>eat the soup it is good :)</p>
+            
+            <p>thank you to my dad for teaching me how to make lentil soup!</p>
+          </article>
+          <article id='journal'>
+            <h1>Dash's attempt at keeping a blog</h1>
+            <h2>The goal is to update at least once or twice a week</h2>
+            <section>
+              <h3>18.3.23</h3>
+              <p>The meds are destroying my appetite so I might see if I can switch to something else... It depends cuz there r shortages I think. I've been way ahead on most of my schoolwork so to keep me occupied I've been practicing javascript more! so far I've made a screen keyboard and a couple of other functions but maybe someday I will turn all this knowledge into a game, well see. Also I found a giant brown canvas jacket at an antique store for only $16! it is almost exactly what I have been looking for (really I wanted a black one but I can't be picky for only $16).</p>
+            </section>
+            <section>
+              <h3>13.3.23</h3>
+              <p>Took (perscribed) (legal) stimulants and coded for approximately 5 hours straight. tbh I do not like them as much as the illegal stimulants bcuz it made me kinda mad all day. love, dash or whatever. also the last episode of the last of us was kinda bad.</p>
+            </section>
+            <section>
+              <h3>12.3.23</h3>
+              <p>I am having a great weekend! Yesterday I went hiking with some friends and today I am working on a new stick n poke. It is of a snake, if I remember to I'll attach a picture of it once it's healed. Also am excited to see the new episode of the last of us tonight.</p>
+            </section>
+          </article>
+        </main>
+      </div>
+    </div>
+    <!--used https://grid.layoutit.com/ bcuz i am too stoopid for grids :) its a good layout making website tho imo-->
+    <div id=footer style='position:relative;'>
+      <a class='invert' rel="license" href="/copyright"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+      <a class='invert' href="https://code.visualstudio.com/" target="_blank"><img src="https://neonriser.neocities.org/button/vsCode.png" alt="Visual Studio Code" title="Made in Visual Studio Code"></a>
+      <a class='invert' href=https://neocities.org><img src='https://anlucas.neocities.org/neocities_button.gif'></a>
+    </div><!--footer-->
+    
+  </body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DASH SITEMAP</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
+      :root{
+      /*SOLARIZED DARK*/
+        --SDblack:#002B36;
+        --SDdarkGray:#01313F;
+        --SDliteGray:#657B83;
+        --SDgray:#93A1A1;
+        --SDpink:#C8357D;
+        --SDgreen:#859900;
+        --SDteal:#2AA198;
+        --SDblue:#268BD2;
+        
+        /*idgaf!!! ill literally explode this entire computer!!! kill everyone!!!*/
+        --SDFmidl:#03535F;
+        --SDFblack:#00212A;
+        --SDFdarkTeal:#0F7179;
+        --SDFliteTeal:#56D2B7;
+        --SDFdarkGreen:#4C6F02;
+        --SDFliteGreen:#B5CD18;
+        --SDFdarkPink:#9A1271;
+        --SDFlitePink:#EC558A;
+        
+        /*SOLARIZED LIGHT*/
+        --SLwhite:#FDF6E3;
+        --SLeggshell:#FBF1D3;
+        }
+      body{
+        background-color:var(--SDteal);
+        color:var(--SLwhite);
+        font-family: 'Ubuntu', sans-serif;
+        font-size:16px;
+        image-rendering:pixelated;
+        background-image: url(https://media.discordapp.net/attachments/1047738694095863871/1062969037140787271/CARBUNCLE.png);
+        animation:scroll 64s linear infinite;
+        background-size:640px;
+        }
+        @keyframes scroll{
+          from {background-position:0 0}
+          to {background-position:640px 480px}
+          }
+      #container{
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color:var(--SLeggshell);
+        padding:20px;
+        min-width:40vw;
+        max-width:90vw;
+        width:auto;
+        max-height:80vh;
+        overflow:scroll;
+        text-align:center;
+        border:4px solid var(--SLwhite);
+        }
+      h1{
+        color:var(--green);
+        font-size:32px;
+        font-weight:bold;
+        color:var(--SDpink);
+        }
+      h2{
+        font-weight:bold;
+        font-size:inherit;
+        }
+      main{
+        display:flex;
+        gap:10px;
+        }
+        main div{
+          flex:1;
+          padding:10px;
+          }
+          main div ul{
+            padding:0;
+            margin:0;
+            margin-bottom:1em;
+            }
+          main div li{
+            list-style:'-';
+            }
+        h2 a{
+          text-decoration:none;
+          color:var(--SDpink);
+          }
+        h2 a:hover{
+          text-decoration:underline;
+        }
+        li a{
+          text-decoration:none;
+          color:var(--SLwhite);
+          }
+      .teal{
+        background-color:var(--SDteal);
+        border-top:4px solid var(--SDFliteTeal);
+        border-left:4px solid var(--SDFliteTeal);
+        border-bottom:4px solid var(--SDFdarkTeal);
+        border-right:4px solid var(--SDFdarkTeal);
+        }
+        .teal li:hover{
+          text-decoration:underline;
+          filter: drop-shadow(2px 2px 0 var(--SDFdarkTeal));
+        }
+      .pink{
+        background-color:var(--SDpink);
+        border-top:4px solid var(--SDFlitePink);
+        border-left:4px solid var(--SDFlitePink);
+        border-bottom:4px solid var(--SDFdarkPink);
+        border-right:4px solid var(--SDFdarkPink);
+        }
+        .pink li:hover{
+          text-decoration:underline;
+          filter: drop-shadow(2px 2px 0 var(--SDFdarkPink));
+          }
+      .green{
+        background-color:var(--SDgreen);
+        border-top:4px solid var(--SDFliteGreen);
+        border-left:4px solid var(--SDFliteGreen);
+        border-bottom:4px solid var(--SDFdarkGreen);
+        border-right:4px solid var(--SDFdarkGreen);}
+        .green li:hover{
+          text-decoration:underline;
+          filter: drop-shadow(2px 2px 0 var(--SDFdarkGreen));
+          }
+    </style>
+  </head>
+  <body>
+    <div id=container>
+      <h1 style='margin-bottom:0;'>Dash's Website</h1>
+      <h2 style='color:var(--SDpink);'>directory</h2>
+      <main>
+        <div class='teal'>
+          <h2>Dash Originals</h2>
+          <ul>
+            <li><a href='/art'>Art</a>
+            <li><a href='/blog'>Blog</a>
+            <li><a href='/quizzes'>Quizzes</a>
+          </ul>
+        </div><!--teal-->
+        <div class='pink'>
+          <h2>Main Site</h2>
+          <ul>
+            <li><a href='/index'>Splash</a>
+            <li><a href='/home'>Home</a>
+            <li><a href='/sitemap'>Directory (you are here)</a>
+            <li><a href='/about'>About</a>
+          </ul>
+        </div><!--pink-->
+        <div class='green'>
+          <h2>Misc.</h2>
+          <ul>
+            <li><a href='/explode'>Explode</a>
+            <li><a href='/copyright'>Copyright</a>
+            <li><a href='/paintchip'>Paintchips</a>
+          </ul>
+        </div><!--green-->
+      </main>
+    </div><!--container-->
+  </body>
+</html>
